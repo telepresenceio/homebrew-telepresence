@@ -3,7 +3,7 @@
 class TelepresenceOss < Formula
   desc "Local dev environment attached to a remote Kubernetes cluster"
   homepage "https://telepresence.io"
-  version "2.29.1"
+  version "2.29.2"
 
   BASE_URL = "https://github.com/telepresenceio/telepresence/releases/download"
   ARCH = Hardware::CPU.arm? ? "arm64" : "amd64"
@@ -12,9 +12,9 @@ class TelepresenceOss < Formula
 
   url "#{BASE_URL}/v#{version}/#{PACKAGE_NAME}"
 
-  sha256 "66b6e31d21b67fc2c2e99fa5a342d4b179d7eb9e6d69b74c87be883127b73c2d" if OS.mac? && Hardware::CPU.intel?
-  sha256 "c94c59f9360cceb34b235960d375c87cee4af725c9c0ab4ef160f57b124f030d" if OS.mac? && Hardware::CPU.arm?
-  sha256 "abeb9eccef04a80e435d7bfb045ecfb8eec57a0350a486185b7cc5776ef54b0e" if OS.linux? && Hardware::CPU.intel?
+  sha256 "43bc3e0deeccbf9185d6991e5b4aac36a9b9483badf8162ac1d35cd050c6a2f2" if OS.mac? && Hardware::CPU.intel?
+  sha256 "637a4ed6c8f09aa69313059b64617cfbfe2e2f1b5942fe3c62cae4d25d80bc14" if OS.mac? && Hardware::CPU.arm?
+  sha256 "7ab30ba6f02da85cee2ff407e4398edc2fefac0469b2ecbd7462829ce5c0ab85" if OS.linux? && Hardware::CPU.intel?
   # TODO support linux arm64
   #sha256 "__TARBALL_HASH_LINUX_ARM64__" if OS.linux? && Hardware::CPU.arm?
 
