@@ -18,8 +18,6 @@ class TelepresenceOss < Formula
   # TODO support linux arm64
   #sha256 "__TARBALL_HASH_LINUX_ARM64__" if OS.linux? && Hardware::CPU.arm?
 
-  conflicts_with "telepresence"
-
   def install
       bin.install "#{PACKAGE_NAME}" => "telepresence"
   end
