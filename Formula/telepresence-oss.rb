@@ -17,8 +17,6 @@ class TelepresenceOss < Formula
   sha256 "0e640c20c7e4c2005917d0d927116e622d4a274dc014c557185079968d8a2e29" if OS.linux? && Hardware::CPU.intel?
   sha256 "647d652a656348824ef580d5e3bb0a872e4e3cbcdce620992c9eb7ee75470e9b" if OS.linux? && Hardware::CPU.arm?
 
-  conflicts_with "telepresence"
-
   def install
       bin.install "#{PACKAGE_NAME}" => "telepresence"
   end
